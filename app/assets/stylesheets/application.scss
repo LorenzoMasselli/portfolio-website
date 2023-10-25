@@ -54,10 +54,6 @@ h5 {
   color:var(--maincolor);
 }
 
-.body {
-  line-height: 1.65;
-  overscroll-behavior-y: none;
-}
 
 .cards-image {
   display: flex;
@@ -149,16 +145,15 @@ h5 {
 }
 
 body {
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
-  // overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   background-color: var(--backgroundcolor) !important;
   overscroll-behavior-y: none;
 }
 
-body::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
-}
+// body::-webkit-scrollbar {
+//   display: none; /* for Chrome, Safari, and Opera */
+// }
 
 .project-card {
   margin-bottom: 3rem;
@@ -270,6 +265,7 @@ body::-webkit-scrollbar {
 @media (min-width: 1250px) {
 .container {
     max-width: 1250px !important;
+    height: 750px;
   }
   .right-content {
     width: 55%;
@@ -277,7 +273,6 @@ body::-webkit-scrollbar {
   }
   .left-sidebar {
     width: 50%;
-    overflow-y: hidden;
   }
   .description {
     margin-bottom: 80px;
@@ -288,8 +283,6 @@ body::-webkit-scrollbar {
 @media (max-width: 1250px) {
   .container {
     flex-direction: column;
-    position: sticky;
-    top: 0;
   }
 
   .left-sidebar,
