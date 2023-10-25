@@ -1,0 +1,150 @@
+<i class="fa-solid fa-arrow-down-long sticky-button p-3"></i>
+<div class="container">
+  <div class="left-sidebar">
+    <h1 class="name">Lorenzo Masselli</h1>
+    <h3>Software Engineer</h3>
+    <p class="description"> I am passionate about developing front-end and back-end solutions that are user-centered and performant.</p>
+    <div class="d-flex flex-column menu">
+      <div>
+        <p class=""><span class="menu-about menu-item chonky-underline active">About</span></p>
+      </div>
+      <div>
+        <p class=""><span class=" menu-projects menu-item">Projects</span></p>
+      </div>
+      <div>
+        <p class=""><span class="menu-experience menu-item">Experience</span></p>
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="d-flex flex-column skills">
+        <p>Coding Languages</p>
+        <div class="d-flex flex-wrap ">
+          <span class="tech-skills">Ruby</span>
+          <span class="tech-skills">SQL</span>
+          <span class="tech-skills">Javascript ES6</span>
+          <span class="tech-skills">CSS</span>
+          <span class="tech-skills">HTML</span>
+        </div>
+      </div>
+      <div class="d-flex flex-column skills">
+        <p>Frameworks & Libraries</p>
+        <div class="d-flex flex-wrap">
+          <span class="tech-skills">Ruby on rails</span>
+          <span class="tech-skills">React</span>
+          <span class="tech-skills">Stimulus</span>
+          <span class="tech-skills">Bootstrap</span>
+          <span class="tech-skills">Mustache.js</span>
+        </div>
+      </div>
+      <div class="d-flex flex-column skills">
+        <p class="">Developer Tools</p>
+        <div class="d-flex flex-wrap">
+          <span class="tech-skills">Git</span>
+          <span class="tech-skills">PostgreSQL</span>
+          <span class="tech-skills">Github</span>
+          <span class="tech-skills">Heroku</span>
+          <span class="tech-skills">Figma</span>
+          <span class="tech-skills">Webpack</span>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex social-media">
+      <a class="socials" href="https://github.com/LorenzoMasselli" target="_blank">
+        <i class="fab fa-github-square fa-2xl" id="logo"></i>
+      </a>
+      <a class="socials" href="https://www.linkedin.com/in/lorenzo-masselli-6a1894129/" target="_blank">
+        <i class="fa-brands fa-linkedin fa-2xl" id="logo"></i>
+      </a>
+      <a class="socials" href="mailto:lorenzomasselli1@gmail.com" target="_blank">
+        <i class="fa-solid fa-square-envelope fa-2xl" id="logo"></i>
+      </a>
+      <a class="socials" href="https://twitter.com/snoopdogg" target="_blank">
+        <i class="fab fa-twitter-square fa-2xl" id="logo"></i>
+      </a>
+    </div>
+  </div>
+  <div class="right-content">
+    <div id="about">
+      <p>In 2022, inspired by the tech I encountered in my finance job, I started learning JavaScript in my spare time. My initial interest quickly blossomed into a passion for coding and web development. Earlier this year I left my job in finance to pursue my passion for software development.</p>
+      <p>Fast-forward to today and I've had the privilege of completing a web development bootcamp and learned to code in a variety of languages. Now in my spare time I am building projects and learning new things.</p>
+      <p>When I am not coding, I am usually on the rugby pitch, walking my chonky beagle, or experimenting in the kitchen.</p>
+    </div>
+    <div id="projects">
+      <%# project card %>
+      <h4>Projects</h4>
+       <a class="link" href="https://www.barhop.tech/" target="_blank">
+        <div class="d-flex project-card">
+          <div class="cards-image px-3">
+            <%= image_tag("barhop.png", alt: "Barhop", :class => "project-images") %>
+          </div>
+          <div class="card-content">
+            <h3>Barhop bar crawl</h3>
+            <p>Collaborated with 2 other students to create a bar crawl generator web app that crafts a unique route through your local bars, tailored to your preferences.</p>
+            <div class="d-flex flex-wrap">
+                <span class="technology">Ruby on rails</span>
+                <span class="technology">Javascript</span>
+                <span class="technology">SCSS</span>
+                <span class="technology">Heroku</span>
+                <span class="technology">PostgreSQL</span>
+                <span class="technology">RESTful API</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <%# project card %>
+      <a class="link" href="https://render-lw1230.herokuapp.com/artworks" target="_blank">
+        <div class="d-flex project-card">
+          <div class="cards-image px-3">
+            <%= image_tag("render.png", alt: "Render", :class => "project-images") %>
+          </div>
+          <div class="card-content">
+            <h3 >Render art sharing</h3>
+            <p >A peer-to-peer web application that allows you to rent and share artworks with others, with a focus on making art accessible to everyone.</p>
+            <div class="d-flex flex-wrap">
+                <span class="technology">Ruby on rails</span>
+                <span class="technology">Javascript</span>
+                <span class="technology">SCSS</span>
+                <span class="technology">Heroku</span>
+                <span class="technology">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="link" href="<%= asset_path('/pdf/resume.pdf') %>" target="_blank">
+          <i class="fa-solid fa-square-arrow-up-right d-inline icon"> </i>
+          <h5 class="ml-2 d-inline slide-link"> See full resume</h5>
+      </a>
+    </div>
+
+    <div id="experience">
+      <%# Experience %>
+      <h4>Experience</h4>
+      <a class="link" href="https://www.pollinate.global/" target="_blank">
+        <div class="d-flex experience-card">
+          <div class="experience-time px-3">
+            <p class="years">2022 - 2023</p>
+          </div>
+          <div class="card-content">
+            <h3 class="mb-0">Pollinate</h3>
+            <p>Business Analyst</p>
+            <p>As part of the CEO's and Chief of Staff team, I led comprehensive market research and analysis to inform data-driven decision-making, strategic partnerships, and product development.</p>
+          </div>
+        </div>
+      </a>
+      <%# Experience %>
+      <a class="link" href="https://www.viasarfatti25.unibocconi.eu/notizia.php?idArt=20554" target="_blank">
+        <div class="d-flex experience-card">
+          <div class="experience-time px-3">
+            <p class="years">2016 - 2021</p>
+          </div>
+          <div class="card-content">
+            <h3 class="mb-0">Zebre • Rugby Lyons • Italy u20</h3>
+            <p>Professional rugby player</p>
+            <p>Rugby is a highly competitive sport that requires effective leadership and good communication to succeed. As a rugby player, I demonstrated these qualities by working closely with my teammates to develop and execute game plans, communicate effectively on the field, and motivate each other to give our best effort.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
