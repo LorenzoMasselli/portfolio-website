@@ -4,6 +4,29 @@ import "controllers"
 import "bootstrap"
 import "@popperjs/core"
 
+
+const postLoad = document.querySelectorAll(".post-load")
+const preLoader = document.querySelector(".svg_preloader")
+
+
+if (window.innerWidth>1250) {
+  setTimeout(() => {
+    preLoader.classList.remove("d-none");
+  }, 420);
+  setTimeout(() => {
+    preLoader.classList.add("d-none");
+  }, 2220);
+  setTimeout(() => {
+    postLoad.forEach ((load) => {
+      load.classList.remove("d-none");
+    })
+  }, 2250);
+} else {
+  postLoad.forEach ((load) => {
+  load.classList.remove("d-none");
+  })
+}
+
 const projectCards = document.querySelectorAll('.project-card');
 
 projectCards.forEach(projectCard => {
@@ -38,6 +61,7 @@ experienceCards.forEach(experienceCard => {
     });
   });
 });
+
 
 
 
