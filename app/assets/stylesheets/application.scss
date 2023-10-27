@@ -8,8 +8,10 @@
   --bubblebackground: #FC7138;
   --radius: 12px;
   --primarywritingcolor: #0D0D0D;
+  // --primarywritingcolor: white;
   --secondarywritingcolor: #999C9E;
   --backgroundcolor: #F0F0F0;
+  // --backgroundcolor: #0E1931;
 }
 
 p {
@@ -273,6 +275,9 @@ body {
   }
   .left-sidebar {
     width: 50%;
+    // border: 1px solid white;
+    // border-radius: var(--radius);
+    // padding: 30px;
   }
   .description {
     margin-bottom: 80px;
