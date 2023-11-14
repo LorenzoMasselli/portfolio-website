@@ -324,3 +324,43 @@ body {
   top: 30%;
   left: 43%;
 }
+
+.glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.1px;
+  height: 0.1px;
+  border-radius: 50%;
+  background-color: rgba(252, 113, 56, 0.05);
+  box-shadow: 0 0 150px 150px rgba(252, 113, 56, 0.3);
+  z-index: 1;
+  animation: move 30s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    top: 25vh;
+    left: 15vw;
+  }
+
+  30% {
+    top: 25vh;
+    left: 85vw;
+  }
+
+  50% {
+    top: 75vh;
+    left: 85vw;
+  }
+
+  80% {
+    top: 75vh;
+    left: 15vw;
+  }
+
+  100% {
+    top: 25vh;
+    left: 15vw;
+  }
+}
