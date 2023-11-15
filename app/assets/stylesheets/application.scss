@@ -320,9 +320,12 @@ body {
 .svg_preloader{
   width: 240px;
   height: 240px;
-  position: fixed;
-  top: 30%;
-  left: 43%;
+}
+.svg-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .glow {

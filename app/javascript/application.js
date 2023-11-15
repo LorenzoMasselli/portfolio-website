@@ -7,15 +7,18 @@ import "@popperjs/core"
 
 const postLoad = document.querySelectorAll(".post-load")
 const preLoader = document.querySelector(".svg_preloader")
+const preLoaderContainer = document.querySelector(".svg-loader-container")
 const glow = document.getElementById("glow")
 
 
 if (window.innerWidth>1250) {
   setTimeout(() => {
     preLoader.classList.remove("d-none");
+    preLoaderContainer.classList.remove("d-none");
   }, 420);
   setTimeout(() => {
     preLoader.classList.add("d-none");
+    preLoaderContainer.classList.add("d-none");
     
   }, 2220);
   setTimeout(() => {
