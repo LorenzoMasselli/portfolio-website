@@ -103,6 +103,9 @@ const projectsMenu = document.querySelector(".menu-projects")
 const experienceMenu = document.querySelector(".menu-experience")
 const container = document.querySelector(".container")
 const leftSidebar = document.querySelector(".left-sidebar")
+
+let hasTriggeredOnce = false;
+
 rightContent.addEventListener("scroll", () => {
   const scrollPosition = rightContent.scrollTop;
 
@@ -134,10 +137,17 @@ rightContent.addEventListener("scroll", () => {
   };
 
   console.log(`experience top is ${experienceContentTop}`);
-  console.log(`scroll is ${scrollPosition}`);
-  console.log(`document width ${window.innerWidth}`);
+  // console.log(`scroll is ${scrollPosition}`);
+  // console.log(`document width ${window.innerWidth}`);
+  if (scrollPosition > 650 && !hasTriggeredOnce) {
+    changeColor();
+    hasTriggeredOnce = true;
+  } else if (scrollPosition <= 650 && hasTriggeredOnce) {
+    changeColor();
+    hasTriggeredOnce = false;
+  }
 
-  if (scrollPosition > (experienceContentTop - 310) && window.innerWidth>1250) {
+  if (scrollPosition > (experienceContentTop - 380) && window.innerWidth>1250) {
         stickyButton.classList.remove("fa-arrow-down-long");
         stickyButton.classList.add("fa-arrow-up-long");
       } else if (scrollPosition < (experienceContentTop - 310) && window.innerWidth>1250) {
@@ -151,7 +161,7 @@ rightContent.addEventListener("scroll", () => {
     if (window.innerWidth > 1250) {
       const scroll = event.deltaY;
       rightContent.scrollBy(0, scroll);
-      event.preventDefault()
+      // event.preventDefault()
     }
     // console.log(`window inner is ${window.innerHeight}`);
     // console.log(`window scroll is ${window.scrollY}`);
@@ -191,3 +201,37 @@ stickyButton.addEventListener("click", () => {
     }, 700);
   }
 })
+
+
+let index = 0
+
+
+const backgroundColor = ["#FEFCF7", "#002020"]
+const mainColor = ["#273420", "#CDFFAF"]
+const primaryWritingColor = ["#283520",  "#5E8562"]
+const headersWritingColor = ["#273420",  "#94c098"]
+const secondaryWritingColor = ["#6D7464", "#999C9E"]
+const bubbleBackground = ["#596b50", "#173A31"]
+const bubbleWriting = ["#E8F3DF", "#C3F5A8"]
+const underline = ["#B4B6AC", "#6c6d67"]
+const hover = ["#F3F3ED", "#003333"]
+const cardShadow = ["rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px", "0px 0px 0px 0px"]
+
+function changeColor() {
+  document.documentElement.style.transitionDuration = '0.5s';
+  document.documentElement.style.setProperty('--backgroundcolor', backgroundColor[index])
+  document.documentElement.style.setProperty('--maincolor', mainColor[index])
+  document.documentElement.style.setProperty('--primarywritingcolor', primaryWritingColor[index])
+  document.documentElement.style.setProperty('--secondarywritingcolor', secondaryWritingColor[index])
+  document.documentElement.style.setProperty('--bubblebackground', bubbleBackground[index])
+  document.documentElement.style.setProperty('--bubblewriting', bubbleWriting[index])
+  document.documentElement.style.setProperty('--underline', underline[index])
+  document.documentElement.style.setProperty('--hover', hover[index])
+  document.documentElement.style.setProperty('--headerswritingcolor', headersWritingColor[index])
+  document.documentElement.style.setProperty('--cardshadow', cardShadow[index])
+  
+  index = (index + 1) % backgroundColor.length;
+}
+
+
+
