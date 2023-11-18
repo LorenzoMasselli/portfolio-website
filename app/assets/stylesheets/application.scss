@@ -230,9 +230,6 @@ body {
 }
 
 
-.social-media {
-  margin-top: 80px;
-}
 
 .socials {
   margin-right: 30px;
@@ -283,9 +280,20 @@ body {
 .years {
   color: var(--primarywritingcolor) !important;
 }
+@media (min-width: 1348px) {
+  .social-media {
+    margin-top: 80px;
+  }
+}
 
+@media (max-width: 1348px) {
+  .social-media {
+    margin-top: 40px;
+  }
+}
 @media (min-width: 1250px) {
-.container {
+  
+  .container {
     max-width: 1450px !important;
     height: 700px;
   }
@@ -314,6 +322,10 @@ body {
 @media (max-width: 1250px) {
   .container {
     flex-direction: column;
+  }
+
+  .social-media {
+    margin-top: 40px;
   }
 
   .left-sidebar,
