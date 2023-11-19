@@ -108,19 +108,24 @@ let hasTriggeredOnce = false;
 
 rightContent.addEventListener("scroll", () => {
   const scrollPosition = rightContent.scrollTop;
-
   let aboutContentTop = aboutContent.offsetTop
   let projectsContentTop = projectsContent.offsetTop
   let experienceContentTop = experienceContent.offsetTop
 
-  if (scrollPosition >= aboutContentTop && scrollPosition < projectsContentTop) {
+  console.log(aboutContentTop);
+  console.log(projectsContentTop);
+  console.log(experienceContentTop);
+  console.log(scrollPosition);
+  
+
+  if (scrollPosition >= aboutContentTop && scrollPosition < (projectsContentTop + 250)) {
     projectsMenu.classList.add("active")
     projectsMenu.classList.add("chonky-underline")
     aboutMenu.classList.remove("active")
     aboutMenu.classList.remove("chonky-underline")
     experienceMenu.classList.remove("active")
     experienceMenu.classList.remove("chonky-underline")
-  } else if (scrollPosition >= projectsContentTop && scrollPosition < experienceContentTop) {
+  } else if (scrollPosition >= (projectsContentTop + 250) && scrollPosition < (experienceContentTop)) {
     experienceMenu.classList.add("active")
     experienceMenu.classList.add("chonky-underline")
     aboutMenu.classList.remove("active")
@@ -208,13 +213,14 @@ let index = 0
 
 const backgroundColor = ["#FEFCF7", "#002020"]
 const mainColor = ["#273420", "#CDFFAF"]
-const primaryWritingColor = ["#283520",  "#5E8562"]
-const headersWritingColor = ["#273420",  "#94c098"]
-const secondaryWritingColor = ["#6D7464", "#999C9E"]
+const primaryWritingColor = ["#283520",  "white"]
+const headersWritingColor = ["#273420",  "white"]
+const secondaryWritingColor = ["#6D7464", "#bbbbbb"]
 const bubbleBackground = ["#596b50", "#173A31"]
 const bubbleWriting = ["#E8F3DF", "#C3F5A8"]
 const underline = ["#B4B6AC", "#6c6d67"]
 const hover = ["#F3F3ED", "#003333"]
+const headerHome = ["#6D7464", "#678F69"]
 const cardShadow = ["rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px", "0px 0px 0px 0px"]
 
 function changeColor() {
@@ -229,6 +235,7 @@ function changeColor() {
   document.documentElement.style.setProperty('--hover', hover[index])
   document.documentElement.style.setProperty('--headerswritingcolor', headersWritingColor[index])
   document.documentElement.style.setProperty('--cardshadow', cardShadow[index])
+  document.documentElement.style.setProperty('--headerHome', headerHome[index])
   
   index = (index + 1) % backgroundColor.length;
 }

@@ -5,7 +5,7 @@
         <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
         <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 60 -20"/>
   </filter>
-  <circle stroke="#6f8191" fill="none" stroke-width="3" cx="124" cy="124" r="120"></circle>
+  <circle stroke="#CDFFAF" fill="none" stroke-width="3" cx="124" cy="124" r="120"></circle>
   <g id="shape" filter="url(#goo)">
     <circle stroke="#6f8191" fill="none" stroke-width="10" cx="124" cy="124" r="105"></circle>
     <circle fill="#6f8191" cx="0" cy="0" r="36" transform="translate(124 124)">
@@ -14,11 +14,11 @@
         values="1.3;0.55;0.55;1.3" keyTimes="0;0.4;0.6;1"
         dur="2s" repeatCount="indefinite" />
     </circle>
-    <circle fill="#6f8191" cx="0" cy="0" r="22">
+    <circle fill="#CDFFAF" cx="0" cy="0" r="22">
       <animateMotion path="M124.1,124l-14.9-14.9c-22.3-22.3-2.5-60.3,28.4-54.4c13.3,2.6,26.1,9,36.4,19.4
       c10.1,10.1,16.5,22.4,19.2,35.4c6.5,31.3-31.7,51.9-54.3,29.3L124.1,124z" dur="2s" repeatCount="indefinite" />
     </circle>
-    <circle fill="#6f8191" cx="0" cy="0" r="22">
+    <circle fill="#CDFFAF" cx="0" cy="0" r="22">
       <animateMotion path="M124.1,124l15.2,15.2c22.2,22.2,2.5,60-28.3,54.2c-13.5-2.5-26.4-9-36.8-19.4c-8.9-8.9-14.9-19.5-18-30.7
       c-9.1-32.5,31.4-55.7,55.2-31.8L124.1,124z" dur="2s" repeatCount="indefinite" />
     </circle>
@@ -70,9 +70,9 @@
         <p class="">Developer Tools</p>
         <div class="d-flex flex-wrap">
           <span class="tech-skills">Git</span>
-          <span class="tech-skills">PostgreSQL</span>
           <span class="tech-skills">Github</span>
           <span class="tech-skills">Heroku</span>
+          <span class="tech-skills">PostgreSQL</span>
           <span class="tech-skills">Figma</span>
           <span class="tech-skills">Webpack</span>
         </div>
@@ -95,21 +95,23 @@
   </div>
   <div class="right-content">
     <div id="about">
-      <h4 class="mb-3">About me</h4>
+      <h3 class="header"><span class="header-home">HOME</span> <span class="mx-2">/</span> ABOUT ME</h3>
+      <hr class="line-break">
       <p class="about-content">In 2022, inspired by the tech I encountered in my finance job, I started learning JavaScript in my spare time. My initial interest quickly blossomed into a passion for coding and web development. Earlier this year I left my job in finance to pursue my passion for software development.</p>
       <p class="about-content">Fast-forward to today and I've had the privilege of completing a web development bootcamp and learned to code in a variety of languages. Now in my spare time I am building projects and learning new things.</p>
       <p class="about-content">When I am not coding, I am usually on the rugby pitch, walking my chonky beagle, or experimenting in the kitchen.</p>
     </div>
     <div id="projects">
       <%# project card %>
-      <h4>Projects</h4>
+      <h3 class="header"><span class="header-home">HOME</span> <span class="mx-2">/</span> PROJECTS</h3>
+      <hr class="line-break">
        <a class="link" href="https://www.barhop.tech/" target="_blank">
         <div class="d-flex project-card">
           <div class="cards-image pr-3">
             <%= image_tag("barhop.png", alt: "Barhop", :class => "project-images") %>
           </div>
           <div class="card-content">
-            <h3>Barhop bar crawl</h3>
+            <h4>Barhop bar crawl</h4>
             <p>Collaborated with 2 other students to create a bar crawl generator web app that crafts a unique route through your local bars, tailored to your preferences.</p>
             <div class="d-flex flex-wrap">
                 <span class="technology">Ruby on rails</span>
@@ -129,7 +131,7 @@
             <%= image_tag("beachouse.png", alt: "Beach House Bar and Grill", :class => "beachouse-image") %>
           </div>
           <div class="card-content">
-            <h3>Beach House Restaurant</h3>
+            <h4>Beach House Restaurant</h4>
             <p>Developed a web app using React for the frontend and Rails for the backend. The app allows users to access the restaurant's website, make online reservations, and view the menu. Admins can manage the restaurant's reservations, including viewing and editing reservations. Features: dynamic routing, data fetching(API), and user authentication.</p>
             <div class="d-flex flex-wrap">
                 <span class="technology">Ruby on rails</span>
@@ -147,7 +149,7 @@
             <%= image_tag("render.png", alt: "Render", :class => "project-images") %>
           </div>
           <div class="card-content">
-            <h3 >Render art sharing</h3>
+            <h4>Render art sharing</h4>
             <p >A peer-to-peer web application that allows you to rent and share artworks with others, with a focus on making art accessible to everyone.</p>
             <div class="d-flex flex-wrap">
                 <span class="technology">Ruby on rails</span>
@@ -167,14 +169,15 @@
 
     <div id="experience">
       <%# Experience %>
-      <h4>Experience</h4>
+      <h3 class="header"><span class="header-home">HOME</span> <span class="mx-2">/</span> EXPERIENCE</h3>
+      <hr class="line-break">
       <a class="link" href="https://www.pollinate.global/" target="_blank">
         <div class="d-flex experience-card">
           <div class="experience-time pr-3">
-            <p class="years">2022 - 2023</p>
+            <p class="years">2022 — 2023</p>
           </div>
           <div class="card-content">
-            <h3 class="mb-0">Pollinate</h3>
+            <h4 class="mb-0">Pollinate</h4>
             <p>Business Analyst</p>
             <p>As part of the CEO's and Chief of Staff team, I did comprehensive market research and analysis on the FinTech industry. This informed data-driven decision-making, strategic partnerships, and business planning.</p>
           </div>
@@ -184,10 +187,10 @@
       <a class="link" href="https://www.viasarfatti25.unibocconi.eu/notizia.php?idArt=20554" target="_blank">
         <div class="d-flex experience-card">
           <div class="experience-time pr-3">
-            <p class="years">2016 - 2021</p>
+            <p class="years">2016 — 2021</p>
           </div>
           <div class="card-content">
-            <h3 class="mb-0">Zebre • Rugby Lyons • Italy u20</h3>
+            <h4 class="mb-0">Zebre • Rugby Lyons • Italy u20</h4>
             <p>Professional rugby player</p>
             <p>Rugby is a highly competitive sport that requires effective leadership and good communication to succeed. As a rugby player, I demonstrated these qualities by working closely with my teammates to develop and execute game plans, communicate effectively on the field, and motivate each other to give our best effort.</p>
           </div>
