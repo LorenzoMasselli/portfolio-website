@@ -108,13 +108,7 @@ h5 {
   .description {
     margin-bottom: 80px;
   }
-  .sticky-button {
-    position: fixed;
-    bottom: 50px;
-    right: 60px;
-    color: var(--maincolor);
-    font-size: 30px;
-  }
+
 }
 
 .active {
@@ -305,9 +299,6 @@ body {
   bottom: 50px;
   right: 60px;
   color: var(--maincolor);
-  font-size: 30px;
-  border-radius: 34%;
-  border: solid 1.5px var(--maincolor);
 }
 
 .tech-skills {
