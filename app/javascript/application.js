@@ -112,10 +112,10 @@ rightContent.addEventListener("scroll", () => {
   let projectsContentTop = projectsContent.offsetTop
   let experienceContentTop = experienceContent.offsetTop
 
-  console.log(aboutContentTop);
-  console.log(projectsContentTop);
-  console.log(experienceContentTop);
-  console.log(scrollPosition);
+  // console.log(aboutContentTop);
+  // console.log(projectsContentTop);
+  // console.log(experienceContentTop);
+  // console.log(scrollPosition);
   
 
   if (scrollPosition >= aboutContentTop && scrollPosition < (projectsContentTop + 250)) {
@@ -141,7 +141,7 @@ rightContent.addEventListener("scroll", () => {
     experienceMenu.classList.remove("chonky-underline")
   };
 
-  console.log(`experience top is ${experienceContentTop}`);
+  // console.log(`experience top is ${experienceContentTop}`);
   // console.log(`scroll is ${scrollPosition}`);
   // console.log(`document width ${window.innerWidth}`);
   if (scrollPosition > 650 && !hasTriggeredOnce) {
@@ -212,33 +212,77 @@ let index = 0
 
 
 const backgroundColor = ["#FEFCF7", "#002020"]
-const mainColor = ["#273420", "#CDFFAF"]
-const primaryWritingColor = ["#283520",  "white"]
-const headersWritingColor = ["#273420",  "white"]
+const mainColor = ["black", "#CDFFAF"]
+const primaryWritingColor = ["black",  "white"]
+const headersWritingColor = ["black",  "white"]
 const secondaryWritingColor = ["#6D7464", "#bbbbbb"]
 const bubbleBackground = ["#596b50", "#173A31"]
 const bubbleWriting = ["#E8F3DF", "#C3F5A8"]
 const underline = ["#B4B6AC", "#6c6d67"]
 const hover = ["#F3F3ED", "#003333"]
 const headerHome = ["#6D7464", "#678F69"]
+const cursorPointer = ["none", "pointer"]
+const headerTitle = ["#283520", "#CDFFAF"]
 const cardShadow = ["rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px", "0px 0px 0px 0px"]
+
+const customCursor = document.createElement('div');
+customCursor.classList.add('custom-cursor');
+customCursor.classList.add('d-none');
+
+document.body.appendChild(customCursor);
+
+
+document.addEventListener('mousemove', function(e){
+	const x = e.clientX + 10;
+	const y = e.clientY + 10;
+
+	customCursor.style.transform = `translate(${x}px, ${y}px)`;
+
+  const hoverables = document.querySelectorAll('.hoverable');
+
+	Array.from(hoverables).forEach((hoverEl) => {
+		hoverEl.addEventListener('mouseover', (e) => {
+			customCursor.classList.add('circle-scale');
+		})
+	})
+
+	Array.from(hoverables).forEach((hoverEl) => {
+		hoverEl.addEventListener('mouseout', (e) => {
+			customCursor.classList.remove('circle-scale');
+		})
+	});
+
+});
+
+
 
 function changeColor() {
   document.documentElement.style.transitionDuration = '0.5s';
-  document.documentElement.style.setProperty('--backgroundcolor', backgroundColor[index])
-  document.documentElement.style.setProperty('--maincolor', mainColor[index])
-  document.documentElement.style.setProperty('--primarywritingcolor', primaryWritingColor[index])
-  document.documentElement.style.setProperty('--secondarywritingcolor', secondaryWritingColor[index])
-  document.documentElement.style.setProperty('--bubblebackground', bubbleBackground[index])
-  document.documentElement.style.setProperty('--bubblewriting', bubbleWriting[index])
-  document.documentElement.style.setProperty('--underline', underline[index])
-  document.documentElement.style.setProperty('--hover', hover[index])
-  document.documentElement.style.setProperty('--headerswritingcolor', headersWritingColor[index])
-  document.documentElement.style.setProperty('--cardshadow', cardShadow[index])
-  document.documentElement.style.setProperty('--headerHome', headerHome[index])
-  
+  document.documentElement.style.setProperty('--backgroundcolor', backgroundColor[index]);
+  document.documentElement.style.setProperty('--maincolor', mainColor[index]);
+  document.documentElement.style.setProperty('--primarywritingcolor', primaryWritingColor[index]);
+  document.documentElement.style.setProperty('--secondarywritingcolor', secondaryWritingColor[index]);
+  document.documentElement.style.setProperty('--bubblebackground', bubbleBackground[index]);
+  document.documentElement.style.setProperty('--bubblewriting', bubbleWriting[index]);
+  document.documentElement.style.setProperty('--underline', underline[index]);
+  document.documentElement.style.setProperty('--hover', hover[index]);
+  document.documentElement.style.setProperty('--headerswritingcolor', headersWritingColor[index]);
+  document.documentElement.style.setProperty('--cardshadow', cardShadow[index]);
+  document.documentElement.style.setProperty('--headerHome', headerHome[index]);
+  document.documentElement.style.setProperty('--cursor', cursorPointer[index]);
+  document.documentElement.style.setProperty('--header', headerTitle[index]);
+
+  if (index === 1) {
+    document.body.style.cursor = "auto";
+    customCursor.classList.add("d-none");
+  } else {
+    customCursor.classList.remove("d-none");
+    document.body.style.cursor = "none";
+  }
   index = (index + 1) % backgroundColor.length;
 }
+
+
 
 
 

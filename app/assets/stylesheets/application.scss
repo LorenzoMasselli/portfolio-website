@@ -17,23 +17,25 @@
   --glowBoxShadow: 0 0 150px 150px rgba(252, 113, 56, 0.3);
   --cardshadow: 0px 0px 0px 0px;
   --headerHome: #678F69;
+  --cursor: pointer;
+  --header: #CDFFAF;
 }
 
 body {
     font-family: 'Roboto', sans-serif !important;
     line-height: 1.625 !important;
+    cursor: auto;
 }
 
 p {
-  // font-family: 'Roboto', sans-serif !important;
   color: var(--secondarywritingcolor) !important;
   font-size: 0.95rem !important;
 }
 
 h1 {
   font-size: 55px !important;
-  color: var(--primarywritingcolor) !important;
 }
+
 
 h2 {
   font-size: 30px !important;
@@ -56,6 +58,63 @@ h5 {
 
 #about {
   margin-bottom: 80px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+
+@media (min-width: 1250px) {
+  
+  .container {
+    max-width: 1450px !important;
+  }
+  .right-content {
+    width: 100%;
+    overflow-y: hidden;
+    padding: 2px;
+    padding-top: 95px;
+    height: 100vh;
+    margin-right: 60px;
+  }
+  .left-sidebar {
+    width: 100%;
+    margin-top: 90px;
+    margin-left: 60px;
+  }
+  .description {
+    margin-bottom: 80px;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .social-media {
+    margin-top: 40px;
+  }
+
+  .left-sidebar,
+  .right-content {
+    width: 100%;
+  }
+  .description {
+    margin-bottom: 80px;
+  }
+  .sticky-button {
+    position: fixed;
+    bottom: 50px;
+    right: 60px;
+    color: var(--maincolor);
+    font-size: 30px;
+  }
 }
 
 .active {
@@ -89,16 +148,6 @@ h5 {
   width: 104%;
   left: -1%;
   background: var(--underline);
-}
-
-.container {
-  display: flex;
-  gap: 100px;
-  // margin-top: 100px;
-  // margin-left: 25px !important;
-  // margin-right: 25px !important;
-  height: 95vh;
-  // width: 90vw;
 }
 
 #experience {
@@ -144,7 +193,7 @@ h5 {
 }
 
 .menu-about, .menu-projects, .menu-experience {
-  cursor: pointer;
+  // cursor: pointer;
 }
 
 .menu-item {
@@ -257,7 +306,8 @@ body {
   right: 60px;
   color: var(--maincolor);
   font-size: 30px;
-  cursor: pointer;
+  border-radius: 34%;
+  border: solid 1.5px var(--maincolor);
 }
 
 .tech-skills {
@@ -290,63 +340,10 @@ body {
   color: var(--primarywritingcolor) !important;
 }
 
-.social-media {
-  margin-top: 80px;
+.all-skills {
+  padding-bottom: 80px
 }
 
-@media (min-width: 1250px) {
-  
-  .container {
-    max-width: 1450px !important;
-    height: 700px;
-  }
-  .right-content {
-    width: 100%;
-    overflow-y: hidden;
-    padding: 2px;
-    padding-top: 95px;
-    height: 100vh;
-    margin-right: 60px;
-  }
-  .left-sidebar {
-    width: 96%;
-    margin-top: 90px;
-    margin-left: 60px;
-    // border: 1px solid white;
-    // border-radius: var(--radius);
-    // padding: 30px;
-  }
-  .description {
-    margin-bottom: 80px;
-    max-width: 450px;
-  }
-}
-
-@media (max-width: 1250px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .social-media {
-    margin-top: 40px;
-  }
-
-  .left-sidebar,
-  .right-content {
-    width: 100%;
-  }
-  .description {
-    margin-bottom: 80px;
-  }
-  .sticky-button {
-    position: fixed;
-    bottom: 50px;
-    right: 60px;
-    color: var(--maincolor);
-    font-size: 30px;
-    cursor: pointer;
-  }
-}
 @media (max-width: 900px) {
 
   .sticky-button {
@@ -365,49 +362,6 @@ body {
   height: 100vh;
 }
 
-// .glow {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 0.1px;
-//   height: 0.1px;
-//   border-radius: 50%;
-//   // background-color: rgba(252, 113, 56, 0.05);
-//   background-color: var(--glowBackgroundColor);
-//   // box-shadow: 0 0 150px 150px rgba(252, 113, 56, 0.3);
-//   box-shadow: var(--glowBoxShadow);
-//   z-index: 1;
-//   animation: move 30s linear infinite;
-// }
-
-
-
-@keyframes move {
-  0% {
-    top: 25vh;
-    left: 15vw;
-  }
-
-  30% {
-    top: 25vh;
-    left: 85vw;
-  }
-
-  50% {
-    top: 75vh;
-    left: 85vw;
-  }
-
-  80% {
-    top: 75vh;
-    left: 15vw;
-  }
-
-  100% {
-    top: 25vh;
-    left: 15vw;
-  }
-}
 
 .footer-note {
   font-style: italic !important;
@@ -415,7 +369,7 @@ body {
 
 
 .header {
-  color: var(--maincolor) !important;
+  color: var(--header) !important;
   margin-bottom: 0px;
   font-weight: 100;
   font-size: 14px !important;
@@ -429,4 +383,31 @@ body {
 
 .header-home {
   color: var(--headerHome);
+}
+
+
+
+.custom-cursor{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	margin-top: calc(-1 * 40px / 2);
+	margin-left: calc(-1 * 40px / 2);
+	background: white;
+	border-radius: 50%;
+	pointer-events: none;
+	mix-blend-mode: difference;
+	z-index: 2;
+}
+
+.circle-scale{
+  // transition-duration: 0.1s;
+	width: calc(25px * 1.5);
+	height: calc(25px * 1.5);
+}
+
+.menu-about, .menu-projects, .menu-experience, .project-card, .experience-card, .socials, .social-media, .sticky-button {
+  cursor: var(--cursor);
 }
