@@ -11,7 +11,7 @@ const preLoaderContainer = document.querySelector(".svg-loader-container")
 const glow = document.getElementById("glow")
 
 
-if (window.innerWidth>1250) {
+if (window.innerWidth>1200) {
   setTimeout(() => {
     preLoader.classList.remove("d-none");
     preLoaderContainer.classList.remove("d-none");
@@ -152,10 +152,10 @@ rightContent.addEventListener("scroll", () => {
     hasTriggeredOnce = false;
   }
 
-  if (scrollPosition > (experienceContentTop - 380) && window.innerWidth>1250) {
+  if (scrollPosition > (experienceContentTop - 380) && window.innerWidth>1200) {
         stickyButton.classList.remove("fa-arrow-down-long");
         stickyButton.classList.add("fa-arrow-up-long");
-      } else if (scrollPosition < (experienceContentTop - 310) && window.innerWidth>1250) {
+      } else if (scrollPosition < (experienceContentTop - 310) && window.innerWidth>1200) {
         stickyButton.classList.add("fa-arrow-down-long");
         stickyButton.classList.remove("fa-arrow-up-long");
       }
@@ -163,7 +163,7 @@ rightContent.addEventListener("scroll", () => {
 
 
   window.addEventListener("wheel", (event) => {
-    if (window.innerWidth > 1250) {
+    if (window.innerWidth > 1200) {
       const scroll = event.deltaY;
       rightContent.scrollBy(0, scroll);
       // event.preventDefault()
@@ -172,10 +172,10 @@ rightContent.addEventListener("scroll", () => {
     // console.log(`window scroll is ${window.scrollY}`);
     // console.log(`document height is ${document.body.scrollHeight}`);
 
-    if ((window.innerHeight + window.scrollY + 100) >= document.body.scrollHeight && stickyButton.outerHTML.includes("fa-arrow-down-long") && window.innerWidth<1250) {
+    if ((window.innerHeight + window.scrollY + 100) >= document.body.scrollHeight && stickyButton.outerHTML.includes("fa-arrow-down-long") && window.innerWidth<1200) {
           stickyButton.classList.remove('fa-arrow-down-long');
           stickyButton.classList.add('fa-arrow-up-long');
-      } else if ((window.innerHeight + window.scrollY + 100) <= document.body.scrollHeight && stickyButton.outerHTML.includes("fa-arrow-up-long") && window.innerWidth<1250)  {
+      } else if ((window.innerHeight + window.scrollY + 100) <= document.body.scrollHeight && stickyButton.outerHTML.includes("fa-arrow-up-long") && window.innerWidth<1200)  {
         stickyButton.classList.add('fa-arrow-down-long');
         stickyButton.classList.remove('fa-arrow-up-long')
     }
@@ -185,17 +185,17 @@ rightContent.addEventListener("scroll", () => {
 
 stickyButton.addEventListener("click", () => {
 
-  if (stickyButton.outerHTML.includes("fa-arrow-up-long") && window.innerWidth>1250) {
+  if (stickyButton.outerHTML.includes("fa-arrow-up-long") && window.innerWidth>1200) {
     document.getElementById("about").scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
-  else if (stickyButton.outerHTML.includes("fa-arrow-up-long") && window.innerWidth<=1250) {
+  else if (stickyButton.outerHTML.includes("fa-arrow-up-long") && window.innerWidth<=1200) {
     document.querySelector(".name").scrollIntoView({ behavior: 'smooth', block: 'center' });
     setTimeout(() => {
       stickyButton.classList.add('fa-arrow-down-long');
       stickyButton.classList.remove('fa-arrow-up-long');
     }, 700);
   }
-  else if (stickyButton.outerHTML.includes("fa-arrow-down-long") && window.innerWidth>1250){
+  else if (stickyButton.outerHTML.includes("fa-arrow-down-long") && window.innerWidth>1200){
     document.getElementById("experience").scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
   else {
