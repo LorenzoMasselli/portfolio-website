@@ -226,10 +226,16 @@ const headerTitle = ["#283520", "#CDFFAF"]
 const cardShadow = ["rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px", "0px 0px 0px 0px"]
 
 const customCursor = document.createElement('div');
+const customCursorTRY = document.createElement('div');
+
+
+customCursorTRY.classList.add("cursor-shadow")
 customCursor.classList.add('custom-cursor');
+
 customCursor.classList.add('d-none');
 
 document.body.appendChild(customCursor);
+document.body.appendChild(customCursorTRY);
 
 
 document.addEventListener('mousemove', function(e){
@@ -237,6 +243,7 @@ document.addEventListener('mousemove', function(e){
 	const y = e.clientY + 10;
 
 	customCursor.style.transform = `translate(${x}px, ${y}px)`;
+  customCursorTRY.style.transform = `translate(${x}px, ${y}px)`;
 
   const hoverables = document.querySelectorAll('.hoverable');
 
@@ -275,9 +282,11 @@ function changeColor() {
   if (index === 1) {
     document.body.style.cursor = "auto";
     customCursor.classList.add("d-none");
+    customCursorTRY.classList.remove("d-none")
   } else {
     customCursor.classList.remove("d-none");
     document.body.style.cursor = "none";
+    customCursorTRY.classList.add("d-none")
   }
   index = (index + 1) % backgroundColor.length;
 }

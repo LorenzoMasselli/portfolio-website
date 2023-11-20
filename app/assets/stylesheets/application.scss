@@ -80,11 +80,13 @@ h5 {
     padding-top: 95px;
     height: 100vh;
     margin-right: 60px;
+    z-index: 1;
   }
   .left-sidebar {
     width: 100%;
     margin-top: 90px;
     margin-left: 60px;
+    z-index: 1;
   }
   .description {
     margin-bottom: 80px;
@@ -186,10 +188,6 @@ h5 {
   overscroll-behavior: none;
 }
 
-.menu-about, .menu-projects, .menu-experience {
-  // cursor: pointer;
-}
-
 .menu-item {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -215,9 +213,6 @@ body {
   transition: background-color 0.4s linear;
 }
 
-// body::-webkit-scrollbar {
-//   display: none; /* for Chrome, Safari, and Opera */
-// }
 
 .project-card {
   margin-bottom: 3rem;
@@ -367,9 +362,11 @@ body {
 }
 
 .line-break {
-  color: var(--maincolor);
-  margin-bottom: 30px;
+  color: var(--header);
+  margin-bottom: 35px;
   margin-top: 8px;
+  height: 0.1px !important;
+  width: 97%;
 }
 
 .header-home {
@@ -401,4 +398,18 @@ body {
 
 .menu-about, .menu-projects, .menu-experience, .project-card, .experience-card, .socials, .social-media, .sticky-button {
   cursor: var(--cursor);
+}
+
+.cursor-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(252, 113, 56, 0.05);
+  box-shadow: 0 0 150px 150px rgba(38, 53, 53, 0.4);
+  // box-shadow: 0 0 150px 150px rgba(252, 113, 56, 0.3);
+  height: 1px;
+  width: 1px;
+  border-radius: 50%;
+  z-index: 0.1;
+  transition: box-shadow 1.3s linear;
 }
