@@ -5,7 +5,7 @@
         <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
         <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 60 -20"/>
   </filter>
-  <circle stroke="#CDFFAF" fill="none" stroke-width="3" cx="124" cy="124" r="120"></circle>
+  <circle stroke="#52DF74" fill="none" stroke-width="3" cx="124" cy="124" r="120"></circle>
   <g id="shape" filter="url(#goo)">
     <circle stroke="#6f8191" fill="none" stroke-width="10" cx="124" cy="124" r="105"></circle>
     <circle fill="#6f8191" cx="0" cy="0" r="36" transform="translate(124 124)">
@@ -14,11 +14,11 @@
         values="1.3;0.55;0.55;1.3" keyTimes="0;0.4;0.6;1"
         dur="2s" repeatCount="indefinite" />
     </circle>
-    <circle fill="#CDFFAF" cx="0" cy="0" r="22">
+    <circle fill="#52DF74" cx="0" cy="0" r="22">
       <animateMotion path="M124.1,124l-14.9-14.9c-22.3-22.3-2.5-60.3,28.4-54.4c13.3,2.6,26.1,9,36.4,19.4
       c10.1,10.1,16.5,22.4,19.2,35.4c6.5,31.3-31.7,51.9-54.3,29.3L124.1,124z" dur="2s" repeatCount="indefinite" />
     </circle>
-    <circle fill="#CDFFAF" cx="0" cy="0" r="22">
+    <circle fill="#52DF74" cx="0" cy="0" r="22">
       <animateMotion path="M124.1,124l15.2,15.2c22.2,22.2,2.5,60-28.3,54.2c-13.5-2.5-26.4-9-36.8-19.4c-8.9-8.9-14.9-19.5-18-30.7
       c-9.1-32.5,31.4-55.7,55.2-31.8L124.1,124z" dur="2s" repeatCount="indefinite" />
     </circle>
@@ -29,7 +29,7 @@
 <i class="fa-solid fa-arrow-down-long fa-xl sticky-button post-load d-none hoverable"></i>
 <div class="container post-load d-none">
   <div class="left-sidebar">
-    <h1 class="name">Lorenzo Masselli</h1>
+    <h1 class="name"><span>Lorenzo Masselli</span></h1>
     <h3>Software Engineer</h3>
     <p class="description"> I am passionate about developing front-end and back-end solutions that are focused on user experience and optimal performance.</p>
     <div class="d-flex flex-column menu">
@@ -110,13 +110,19 @@
       <%# project card %>
       <h3 class="header"><span class="header-home">HOME</span> <span class="mx-2">/</span> PROJECTS</h3>
       <hr class="line-break">
-       <a class="link" href="https://www.barhop.tech/" target="_blank">
-        <div class="d-flex project-card hoverable">
+        <div class="d-flex project-card">
           <div class="cards-image pr-3">
-            <%= image_tag("barhop.png", alt: "Barhop", :class => "beachouse-image") %>
+            <%= image_tag("barhop.png", alt: "Barhop", :class => "project-image") %>
+            <%= image_tag("barhop2.png", alt: "Barhop", :class => "project-image") %>
           </div>
           <div class="card-content">
-            <h4>Barhop bar crawl</h4>
+            <h4 class="card-content-header">
+              <p>Barhop Bar Crawl App</p>
+              <div class="card-content-links">
+                <a class="link" href="https://github.com/dyloff/barhop" target="_blank"><i class="fa-brands fa-github icon-links"></i></a>
+                <a class="link" href="https://www.barhop.tech/" target="_blank"><i class="fa-solid fa-link icon-links"></i></a>
+              </div>
+            </h4>
             <p>Collaborated with other student developers to create a bar crawl generator web app that crafts a unique route through your local bars, tailored to your preferences.</p>
             <div class="d-flex flex-wrap">
                 <span class="technology">Ruby on Rails</span>
@@ -128,15 +134,21 @@
             </div>
           </div>
         </div>
-      </a>
       <%# project card %>
-       <a class="link" href="https://lorenzomasselli.github.io/react-rails-restaurant-frontend/" target="_blank">
-        <div class="d-flex project-card hoverable">
+        <div class="d-flex project-card">
           <div class="cards-image pr-3">
-            <%= image_tag("restaurant.png", alt: "restaurant", :class => "beachouse-image") %>
+            <%= image_tag("restaurant.png", alt: "restaurant", :class => "project-image") %>
+            <%= image_tag("restaurant2.png", alt: "restaurant", :class => "project-image") %>
+            <%= image_tag("restaurant3.png", alt: "restaurant", :class => "project-image") %>
           </div>
           <div class="card-content">
-            <h4>Restaurant Reservation Management</h4>
+            <h4 class="card-content-header">
+              <p>Restaurant Reservation Management </p>
+              <div class="card-content-links">
+                <a class="link" href="https://github.com/LorenzoMasselli/react-rails-restaurant-frontend" target="_blank"><i class="fa-brands fa-github icon-links"></i></a>
+                <a class="link" href="https://lorenzomasselli.github.io/react-rails-restaurant-frontend/" target="_blank"><i class="fa-solid fa-link icon-links"></i></a>
+              </div>
+            </h4>
             <p>Developed a restaurant web app using React for the frontend and Ruby on Rails for the backend. Admins can manage the restaurant's reservations after logging in. Features: dynamic routing, data fetching, hooks, handling user input and user authentication.</p>
             <div class="d-flex flex-wrap">
                 <span class="technology">Ruby on Rails</span>
@@ -147,17 +159,23 @@
                 <span class="technology">Heroku</span>
             </div>
           </div>
-        </div>
-      </a>
+      </div>
 
       <%# project card %>
-      <a class="link" href="https://render-lw1230.herokuapp.com/artworks" target="_blank">
-        <div class="d-flex project-card hoverable">
+
+        <div class="d-flex project-card">
           <div class="cards-image pr-3">
-            <%= image_tag("render.png", alt: "Render", :class => "beachouse-image") %>
+            <%= image_tag("render.png", alt: "Render", :class => "project-image") %>
+            <%= image_tag("render2.png", alt: "Render", :class => "project-image") %>
           </div>
           <div class="card-content">
-            <h4>Render art sharing</h4>
+            <h4 class="card-content-header">
+              <p>Render Art Sharing </p>
+              <div class="card-content-links">
+                <a class="link" href="https://github.com/AlekP141/Render" target="_blank"><i class="fa-brands fa-github icon-links"></i></a>
+                <a class="link" href="https://render-lw1230.herokuapp.com/artworks" target="_blank"><i class="fa-solid fa-link icon-links"></i></a>
+              </div>
+            </h4>
             <p >Collaborated with other student developers to create a peer-to-peer web application that allows you to rent and share artworks with others, with a focus on making art accessible to everyone.</p>
             <div class="d-flex flex-wrap">
                 <span class="technology">Ruby on Rails</span>
@@ -168,7 +186,6 @@
             </div>
           </div>
         </div>
-      </a>
     </div>
 
     <div id="experience">
