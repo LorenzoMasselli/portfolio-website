@@ -8,30 +8,36 @@ import "@popperjs/core"
 const postLoad = document.querySelectorAll(".post-load")
 const preLoader = document.querySelector(".svg_preloader")
 const preLoaderContainer = document.querySelector(".svg-loader-container")
-const glow = document.getElementById("glow")
 
-
-if (window.innerWidth>1200) {
-  setTimeout(() => {
-    preLoader.classList.remove("d-none");
-    preLoaderContainer.classList.remove("d-none");
-  }, 420);
-  setTimeout(() => {
-    preLoader.classList.add("d-none");
-    preLoaderContainer.classList.add("d-none");
-    
-  }, 2220);
-  setTimeout(() => {
-    postLoad.forEach ((load) => {
-      load.classList.remove("d-none");
-    })
-    glow.classList.add("glow")
-  }, 2250);
-} else {
-  postLoad.forEach ((load) => {
-  load.classList.remove("d-none");
+window.onload = function pageTransition() {
+  const colors = document.querySelectorAll(".color")
+  const colorContainer = document.querySelector(".colors")
+  colors.forEach((color, i) => {
+    color.style.animationPlayState = "running"
   })
 }
+
+// if (window.innerWidth>1200) {
+//   setTimeout(() => {
+//     preLoader.classList.remove("d-none");
+//     preLoaderContainer.classList.remove("d-none");
+//   }, 420);
+//   setTimeout(() => {
+//     preLoader.classList.add("d-none");
+//     preLoaderContainer.classList.add("d-none");
+    
+//   }, 2220);
+//   setTimeout(() => {
+//     postLoad.forEach ((load) => {
+//       load.classList.remove("d-none");
+//     })
+//     glow.classList.add("glow")
+//   }, 2250);
+// } else {
+//   postLoad.forEach ((load) => {
+//   load.classList.remove("d-none");
+//   })
+// }
 
 const projectCards = document.querySelectorAll('.project-card');
 
@@ -291,6 +297,4 @@ stickyButton.addEventListener("click", () => {
 // }
 
 
-
-
-
+// ///////////////////////////
