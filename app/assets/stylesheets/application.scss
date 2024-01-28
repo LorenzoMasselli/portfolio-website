@@ -510,13 +510,18 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  z-index: 10000;
 }
 
 .color {
   position: absolute;
-  animation: fill 3s ease-in-out;
+  height: 100%;
+  animation: fill 3s ease-in-out 4s;
   animation-play-state: paused;
   width: 100%;
+  overflow: hidden;
+  z-index: 10000;
+  color: white;
 }
 .green {
   background-color: #011518;
@@ -535,3 +540,68 @@ body {
     height: 0%;
   }
 }
+
+// .loader-text {
+//   position: absolute;
+//   top: 40%;
+//   font-size: 6rem !important;
+//   animation: movement 2.4s ease-in-out 5s;
+//   text-align: center;
+//   // transform: translate(-50%, -50%);
+//   width: 100vw;
+//   z-index: 10001;
+// }
+
+// @keyframes movement {
+//   0% {
+//     top: 50%;
+//   }
+
+//   100% {
+//     top: 150%
+//   }
+// }
+
+
+.swift-up-text span{
+  overflow: hidden;
+  animation: .3s swift-up ease-in-out  0.5s forwards;
+
+  display: inline-block;
+}
+
+.swift-up-text i{
+  font-style: normal;
+  position: relative;
+  top: 150px;
+  animation: 1.5s swift-up ease-in-out 0.5s forwards;
+}
+
+.swift-up-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  letter-spacing: -1px;
+  font-size: 55px;
+  gap: 15px;
+  animation: opacity 1s ease-in;
+}
+
+
+
+@keyframes swift-up {
+  to {
+    top: 0;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

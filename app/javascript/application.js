@@ -8,6 +8,34 @@ import "@popperjs/core"
 const postLoad = document.querySelectorAll(".post-load")
 const preLoader = document.querySelector(".svg_preloader")
 const preLoaderContainer = document.querySelector(".svg-loader-container")
+const loaderText = document.querySelector(".colors")
+
+setTimeout(() => {
+  loaderText.remove();
+}, 7000);
+// const glow = document.getElementById("glow")
+// glow.classList.add("glow")
+
+const swiftUpElements = document.querySelectorAll('.swift-up-text');
+swiftUpElements.forEach(elem => {
+
+	const words = elem.textContent.split(' ');
+	elem.innerHTML = '';
+
+	words.forEach((el, index) => {
+		words[index] = `<span><i>${words[index]}</i></span>`;
+	});
+
+	elem.innerHTML = words.join(' ');
+
+	const children = document.querySelectorAll('span > i');
+	children.forEach((node, index) => {
+		node.style.animationDelay = `${index * .35}s`;
+	});
+
+});
+
+
 
 window.onload = function pageTransition() {
   const colors = document.querySelectorAll(".color")
@@ -16,29 +44,6 @@ window.onload = function pageTransition() {
     color.style.animationPlayState = "running"
   })
 }
-
-// if (window.innerWidth>1200) {
-//   setTimeout(() => {
-//     preLoader.classList.remove("d-none");
-//     preLoaderContainer.classList.remove("d-none");
-//   }, 420);
-//   setTimeout(() => {
-//     preLoader.classList.add("d-none");
-//     preLoaderContainer.classList.add("d-none");
-    
-//   }, 2220);
-//   setTimeout(() => {
-//     postLoad.forEach ((load) => {
-//       load.classList.remove("d-none");
-//     })
-//     glow.classList.add("glow")
-//   }, 2250);
-// } else {
-//   postLoad.forEach ((load) => {
-//   load.classList.remove("d-none");
-//   })
-// }
-
 const projectCards = document.querySelectorAll('.project-card');
 
 projectCards.forEach(projectCard => {
