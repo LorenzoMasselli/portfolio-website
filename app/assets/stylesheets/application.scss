@@ -140,6 +140,11 @@ h5 {
     margin-bottom: 40px;
     max-width: 550px;
   }
+
+  .swift-up-text {
+    font-size: 55px;
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -158,6 +163,11 @@ h5 {
   }
   .description {
     margin-bottom: 80px;
+  }
+
+  .swift-up-text {
+    font-size: 45px !important;
+    gap: 1rem !important;
   }
 
 }
@@ -381,6 +391,12 @@ body {
   .sticky-button {
     display: none !important;
   }
+  .swift-up-text {
+    font-size: 18px !important;
+    gap: 0.5rem !important;
+    width: 100vw;
+    flex-wrap: wrap;
+  }
 }
 
 .svg_preloader{
@@ -564,9 +580,8 @@ body {
 
 
 .swift-up-text span{
-  overflow: hidden;
+  overflow-y: hidden;
   animation: .3s swift-up ease-in-out  0.5s forwards;
-
   display: inline-block;
 }
 
@@ -584,8 +599,6 @@ body {
   height: 100vh;
   margin: 0;
   letter-spacing: -1px;
-  font-size: 55px;
-  gap: 15px;
   animation: opacity 1s ease-in;
 }
 
