@@ -527,6 +527,7 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 10000;
+  height: 100vh;
 }
 
 .color {
@@ -557,64 +558,47 @@ body {
   }
 }
 
-// .loader-text {
-//   position: absolute;
-//   top: 40%;
-//   font-size: 6rem !important;
-//   animation: movement 2.4s ease-in-out 5s;
-//   text-align: center;
-//   // transform: translate(-50%, -50%);
-//   width: 100vw;
-//   z-index: 10001;
-// }
-
-// @keyframes movement {
-//   0% {
-//     top: 50%;
-//   }
-
-//   100% {
-//     top: 150%
-//   }
-// }
-
-
-.swift-up-text span{
-  overflow-y: hidden;
-  animation: .3s swift-up ease-in-out  0.5s forwards;
-  display: inline-block;
-}
-
-.swift-up-text i{
-  font-style: normal;
-  position: relative;
-  top: 150px;
-  animation: 1.5s swift-up ease-in-out 0.5s forwards;
-}
-
 .swift-up-text {
   display: flex;
+  height: 100vh;
+  // width: 100vw;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  letter-spacing: -1px;
-  animation: opacity 1s ease-in;
+
 }
 
-
-
-@keyframes swift-up {
-  to {
-    top: 0;
-  }
+.swift-1 {
+  opacity: 0;
+  animation: fadeIn ease-in 2s forwards;
 }
-@keyframes opacity {
-  0% {
+.swift-2 {
+  opacity: 0;
+  animation: fadeIn ease-in 3s forwards;
+}
+.swift-3 {
+  opacity: 0;
+  animation: fadeIn ease-in 4s forwards;
+}
+.swift-4 {
+  opacity: 0;
+  animation: fadeIn ease-in 4.5s forwards;
+}
+.swift-5 {
+  opacity: 0;
+  animation: fadeIn ease-in 5.3s forwards;
+}
+.swift-6 {
+  opacity: 0;
+  animation: fadeIn ease-in 6s forwards;
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
+
 
