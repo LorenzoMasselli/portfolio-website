@@ -12,7 +12,7 @@ const loaderText = document.querySelector(".colors")
 
 setTimeout(() => {
   loaderText.remove();
-}, 7000);
+}, 4400);
 // const glow = document.getElementById("glow")
 // glow.classList.add("glow")
 

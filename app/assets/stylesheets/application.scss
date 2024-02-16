@@ -13,7 +13,7 @@
   --primarywritingcolor: #eeeeee;
   --headerswritingcolor: rgba(255, 255, 255, 0.813); 
   --secondarywritingcolor: #bbbbbb;
-  --backgroundcolor: #0B0A1A;
+  --backgroundcolor: #010B11;
   --glowBackgroundColor: rgba(252, 113, 56, 0.05);
   --glowBoxShadow: 0 0 150px 150px rgba(252, 113, 56, 0.3);
   --cardshadow: 0px 0px 0px 0px;
@@ -533,8 +533,8 @@ body {
 .color {
   position: absolute;
   height: 100%;
-  animation: fill 3s ease-in-out 4s;
-  animation-play-state: paused;
+  animation: fill 3s ease-in-out 1.5s;
+  // animation-play-state: paused;
   width: 100%;
   overflow: hidden;
   z-index: 10000;
@@ -569,34 +569,34 @@ body {
 
 .swift-1 {
   opacity: 0;
-  animation: fadeIn ease-in 2s forwards;
+  animation: fadeIn ease-in 0.7s forwards;
 }
 .swift-2 {
   opacity: 0;
-  animation: fadeIn ease-in 3s forwards;
+  animation: fadeIn ease-in 1s forwards;
 }
 .swift-3 {
   opacity: 0;
-  animation: fadeIn ease-in 4s forwards;
+  animation: fadeIn ease-in 1.3s forwards;
 }
 .swift-4 {
   opacity: 0;
-  animation: fadeIn ease-in 4.5s forwards;
+  animation: fadeIn ease-in 1.5s forwards;
 }
 .swift-5 {
   opacity: 0;
-  animation: fadeIn ease-in 5.3s forwards;
+  animation: fadeIn ease-in 1.7s forwards;
 }
 .swift-6 {
   opacity: 0;
-  animation: fadeIn ease-in 6s forwards;
+  animation: fadeIn ease-in 1.8s forwards;
 }
 
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }

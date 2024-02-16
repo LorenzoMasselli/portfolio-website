@@ -122,33 +122,6 @@
     </div>
     <div id="projects">
       <%# project card %>
-      <h3 class="header"><span class="header-home">HOME</span> <span class="mx-2">/</span> PROJECTS</h3>
-      <hr class="line-break">
-        <div class="d-flex project-card">
-          <div class="cards-image pr-3">
-            <%= image_tag("barhop.png", alt: "Barhop", :class => "project-image") %>
-            <%= image_tag("barhop2.png", alt: "Barhop", :class => "project-image") %>
-          </div>
-          <div class="card-content">
-            <h4 class="card-content-header">
-              <p>Barhop Bar Crawl App</p>
-              <div class="card-content-links">
-                <a class="link" href="https://github.com/dyloff/barhop" target="_blank"><i class="fa-brands fa-github icon-links"></i></a>
-                <a class="link" href="https://www.barhop.tech/" target="_blank"><i class="fa-solid fa-link icon-links"></i></a>
-              </div>
-            </h4>
-            <p>Contributed to the development of BarHop, a web application that generates curated routes based on preferences like venue type, price, and the number of bars. Integrated external Restful APIs for real-time access to comprehensive bar venue data, enhancing the user experience.</p>
-            <div class="d-flex flex-wrap">
-                <span class="technology">Ruby on Rails</span>
-                <span class="technology">Javascript</span>
-                <span class="technology">SCSS</span>
-                <span class="technology">Heroku</span>
-                <span class="technology">PostgreSQL</span>
-                <span class="technology">RESTful API</span>
-            </div>
-          </div>
-        </div>
-      <%# project card %>
         <div class="d-flex project-card">
           <div class="cards-image pr-3">
             <%= image_tag("restaurant.png", alt: "restaurant", :class => "project-image") %>
@@ -176,6 +149,34 @@
             </div>
           </div>
       </div>
+
+      <%# project card %>
+      <h3 class="header"><span class="header-home">HOME</span> <span class="mx-2">/</span> PROJECTS</h3>
+      <hr class="line-break">
+        <div class="d-flex project-card">
+          <div class="cards-image pr-3">
+            <%= image_tag("barhop.png", alt: "Barhop", :class => "project-image") %>
+            <%= image_tag("barhop2.png", alt: "Barhop", :class => "project-image") %>
+          </div>
+          <div class="card-content">
+            <h4 class="card-content-header">
+              <p>Barhop Bar Crawl App</p>
+              <div class="card-content-links">
+                <a class="link" href="https://github.com/dyloff/barhop" target="_blank"><i class="fa-brands fa-github icon-links"></i></a>
+                <%# <a class="link" href="https://www.barhop.tech/" target="_blank"><i class="fa-solid fa-link icon-links"></i></a> %>
+              </div>
+            </h4>
+            <p>Contributed to the development of BarHop, a web application that generates curated routes based on preferences like venue type, price, and the number of bars. Integrated external Restful APIs for real-time access to comprehensive bar venue data, enhancing the user experience.</p>
+            <div class="d-flex flex-wrap">
+                <span class="technology">Ruby on Rails</span>
+                <span class="technology">Javascript</span>
+                <span class="technology">SCSS</span>
+                <span class="technology">Heroku</span>
+                <span class="technology">PostgreSQL</span>
+                <span class="technology">RESTful API</span>
+            </div>
+          </div>
+        </div>
 
       <%# project card %>
 
